@@ -3,8 +3,9 @@ name: Test
 on:
   push:
     branches: # on all branches except `typos`
-      - '**'
-      - '!typos'
+      - '**'         # changes of source code here
+      - '!typos'     # branch for typos only
+      - '!analysis'  # branch for analysis only
     paths-ignore:
       - 'docs/**'
       - 'scripts/**'
